@@ -1,5 +1,13 @@
 import Foundation
 
+public func easeLinear(_ t: Double) -> Double {
+    return t
+}
+
+public func easeSmoothstep(_ t: Double) -> Double {
+    return t * t * (3 - 2 * t)
+}
+
 public func easeInSine(_ t: Double) -> Double {
     return sin(1.5707963 * t)
 }
@@ -172,6 +180,14 @@ public func easeInOutBounce(_ t: Double) -> Double {
     } else {
         return 1.0 - 8.0 * pow(2.0, -8.0 * t) * abs(sin(t * Double.pi * 7.0))
     }
+}
+
+public func easeLinear(_ t: Float) -> Float {
+    return t
+}
+
+public func easeSmoothstep(_ t: Float) -> Float {
+    return t * t * (3 - 2 * t)
 }
 
 public func easeInSine(_ t: Float) -> Float {
