@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name                   = "Easings"
-  spec.version                = "0.0.2"
+  spec.version                = "0.0.3"
   spec.summary                = "Easing curves in Swift"
   spec.description            = <<-DESC
   Easing curves in Swift
@@ -15,7 +15,7 @@ Pod::Spec.new do |spec|
   spec.ios.deployment_target  = "9.0"
   spec.tvos.deployment_target = "9.0"
 
-  spec.source_files           = "Source/*.h", "Source/**/*.{h,m,swift}"
+  spec.source_files           = "Sources/Easings/*.swift"
   spec.module_name            = "Easings"
   spec.swift_version          = "5.1"
 end
