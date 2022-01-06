@@ -82,15 +82,7 @@ public func easeOutQuint(_ t: Double) -> Double {
 }
 
 public func easeInOutQuint(_ t: Double) -> Double {
-    var t2: Double
-    if t < 0.5 {
-        t2 = t * t
-        return 16.0 * t * t2 * t2
-    } else {
-        let tMinueOne = t - 1.0
-        t2 = tMinueOne * tMinueOne
-        return 1.0 + 16.0 * t * t2 * t2
-    }
+    return t < 0.5 ? 16 * t * t * t * t * t : 1 - pow(-2 * t + 2, 5) / 2
 }
 
 public func easeInExpo(_ t: Double) -> Double {
